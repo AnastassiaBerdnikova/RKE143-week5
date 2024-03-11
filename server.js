@@ -57,9 +57,10 @@ const server = http.createServer((request, response) => {
     else {
         response.writeHead(404);
         response.write(`Error. ${requestUrl} page has not found.`);
+        response.end();
      }
 
-    response.end();
+    
 
 });
   /*  response.write(`Hello from port ${port}`);
